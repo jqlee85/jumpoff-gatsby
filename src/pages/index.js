@@ -1,23 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import HomeLanding from "../sections/HomeLanding/HomeLanding"
+import HomeSectionTwo from "../sections/HomeSectionTwo/HomeSectionTwo"
+// import HomeSectionThree from "../sections/HomeSectionThree/HomeSectionThree"
+// import HomeSectionFour from "../sections/HomeSectionFour/HomeSectionFour"
+import HomeSectionFive from "../sections/HomeSectionFive/HomeSectionFive"
 
-import "./index.sass"
+import "./index.scss"
 
-const IndexPage = () => (
+const Home = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div id="home" className="home">      
+      <HomeLanding/>
+      <HomeSectionTwo/>
+      {/*<HomeSectionThree/>
+      <HomeSectionFour/>*/}
+      <HomeSectionFive/> 
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
-export default IndexPage
+export default Home
+
